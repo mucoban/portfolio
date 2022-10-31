@@ -31,17 +31,16 @@
     </div>
     <div class="column-page">
       <ng-scrollbar [autoHeightDisabled]="false">
-        <div class="badge">
-          <div class="name-first">
-            <span class="i1">Mücahit</span>
-            <span class="i2">Çoban</span>
+        <div class="section info" #section>
+          <div class="badge">
+            <div class="name-first">
+              <span class="i1">Mücahit</span>
+              <span class="i2">Çoban</span>
+            </div>
+            <div class="name-second">
+              Full-stack Developer
+            </div>
           </div>
-          <div class="name-second">
-            Full-stack Developer
-          </div>
-        </div>
-
-        <div class="section info">
           <div class="inner">
             <a class="sitem" href="mailto:a">
               <label>E-mail:</label>
@@ -68,7 +67,7 @@
           </div>
         </div>
 
-        <div class="section skills">
+        <div class="section skills" #section>
           <div class="inner">
             <div class="headline">Skills</div>
             <a class="sitem" *ngFor="let mitem of [
@@ -88,7 +87,7 @@
           </div>
         </div>
 
-        <div class="section skills">
+        <div class="section used" #section>
           <div class="inner">
             <div class="headline">I have used</div>
             <a class="sitem" *ngFor="let mitem of [
