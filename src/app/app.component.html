@@ -7,22 +7,22 @@
                alt="my-image">
         </div>
       </div>
-      <div class="menu-box">
+      <div class="menu-box" [attr.active]="activeMitem">
         <div class="zip"></div>
         <div class="content">
-          <div class="mitem">
+          <div class="mitem" (click)="onClickMitem(0)">
             <div class="knot"></div>
             <span>Info</span>
           </div>
-          <div class="mitem">
+          <div class="mitem" (click)="onClickMitem(1)">
             <div class="knot"></div>
             <span>Skills</span>
           </div>
-          <div class="mitem active">
+          <div class="mitem" (click)="onClickMitem(2)">
             <div class="knot"></div>
             <span>I've used</span>
           </div>
-          <div class="mitem">
+          <div class="mitem" (click)="onClickMitem(3)">
             <div class="knot"></div>
             <span>Experience</span>
           </div>
