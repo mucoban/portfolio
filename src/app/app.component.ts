@@ -8,7 +8,7 @@ import {Subject, takeUntil, tap} from "rxjs";
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements AfterViewInit, OnDestroy {
-
+  private timer: any
   activeMitem: number = 1
   private skipEventListener: boolean;
   private oldScrollLinePosition: number = 0
@@ -26,15 +26,16 @@ export class AppComponent implements AfterViewInit, OnDestroy {
             if (this.skipEventListener) {
               return
             }
-            console.log('scroll')
-            const heightLimit = window.innerHeight - 277
+            const heightLimit = window.innerHeight - 200
             const parentScrollTopLine = e.target.scrollTop + heightLimit / 2
+            console.log('parentScrollTopLine', parentScrollTopLine)
             this.sections.map((section, index) => {
                const sectionOffsetTop = section.nativeElement.offsetTop
                if (1 || section.nativeElement.scrollHeight === heightLimit) {
                  const sectionBottom = sectionOffsetTop + section.nativeElement.scrollHeight
                  const sectionBottomUpper = sectionBottom - heightLimit / 2
                  let addToIndex = 0
+
                  if (parentScrollTopLine >= sectionBottomUpper
                   && parentScrollTopLine <= sectionBottom
                  ) {
@@ -74,7 +75,6 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   onClickMitem(sectionIndex: number) {
     const nextSection = this.sections.find((s, index) => index === sectionIndex)
     if (nextSection) {
-      console.log(nextSection.nativeElement.offsetTop)
       this.activeMitem = sectionIndex + 1
       this.scroll({ top: nextSection.nativeElement.offsetTop, duration: 600 })
     }
@@ -83,9 +83,9 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private scroll(options: any) {
     this.skipEventListener = true;
     this.scrollbarRef.scrollTo(options)
-    setTimeout(() => { this.skipEventListener = false
-      console.log('falsed')
-    }, options.duration + 600)
+    clearTimeout(this.timer)
+    this.timer = setTimeout(() => { this.skipEventListener = false
+    }, options.duration + 100)
   }
 
 }

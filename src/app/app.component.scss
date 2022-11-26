@@ -9,8 +9,8 @@
 }
 .wfull { width: 100%; }
 
-.column-menu { flex-grow: 0; padding: 50px 20px; }
-.column-page { flex-grow: 1; padding: 50px 20px; height: 100%; }
+.column-menu { flex-grow: 0; padding: 50px 20px;  }
+.column-page { flex-grow: 1; padding: 50px 20px; height: 100%; position: relative }
 .picture-box {
   display: inline-block; box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.5);
   .inner {
@@ -27,12 +27,20 @@
   min-height: calc(100vh - 200px);
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: flex-start; border-bottom: 1px solid green;
   &.info { }
-  .sitem { border-bottom: 1px solid #ccc; padding-bottom: 3px; display: inline-block;
+  .sitem { border-bottom: 1px solid #ccc; padding: 10px; display: inline-block;
     margin: 10px 15px; margin-left: 0; cursor: pointer; font-size: 14px; text-decoration: none;
-    label { font-weight: 600; color: #666; margin-right: 5px; }
-    span { font-weight: 300; color: #666; }
+    background-color: #ccc; color: white;
+    img {
+      height: 11px; margin-right: 10px;
+      &.linkedin { height: 21px; margin: -4px 0; margin-right: 10px; }
+      &.github { height: 18px; margin: -3px 0; margin-right: 10px; }
+      &.phone { height: 15px; margin: 0px 0 -3px; margin-right: 10px; }
+      &.cv { height: 22px; margin: -5px 0; margin-right: 10px; }
+    }
+    label { font-weight: 500; color: #777; margin-right: 5px; }
+    span { font-weight: 300; color: white; }
   }
 }
 
@@ -70,3 +78,5 @@
     }
   }
 }
+
+

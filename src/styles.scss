@@ -9,3 +9,9 @@
 
 body { margin: 0; }
 
+.ng-scrollbar-wrapper>scrollbar-y.scrollbar-control>.ng-scrollbar-track {
+  width: 2px !important; background-color: #ccc; overflow: visible;
+  .ng-scrollbar-thumb {
+    width: 5px !important; margin: 0 -2px; background-color: #ccc;
+  }
+}
