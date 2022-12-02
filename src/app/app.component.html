@@ -75,20 +75,31 @@
         <div class="section skills" #section>
           <div class="inner">
             <div class="headline">Skills</div>
-            <a class="sitem" *ngFor="let mitem of [
-              { title: 'Html, scss', percentage: '90' },
-              { title: 'Javascript, Jquery', percentage: '90' },
+
+            <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }" *ngFor="let mitem of [
+              { title: 'Html, scss', percentage: '95' },
+              { title: 'Javascript, Jquery', percentage: '95' },
               { title: 'Angular', percentage: '90' },
+              { break: true },
+              { title: 'Codeigniter', percentage: '90' },
+              { title: 'Mysql', percentage: '90' },
+              { title: 'Php', percentage: '80' },
+              { title: 'Git', percentage: '80' },
+              { break: true },
               { title: 'React', percentage: '50' },
               { title: 'Node, Express', percentage: '50' },
               { title: 'MongoDb', percentage: '50' },
-              { title: 'Php', percentage: '90' },
-              { title: 'Codeigniter', percentage: '90' },
-              { title: 'Mysql', percentage: '90' },
             ]">
-              <label>{{ mitem.title }}</label>
-              <span>{{ mitem.percentage }}%</span>
-            </a>
+              <a class="sitem p{{ mitem?.percentage }}" *ngIf="!mitem?.break">
+                <span class="bar"></span>
+                <span class="content">
+                <label>{{ mitem?.title }}</label>
+              <span>{{ mitem?.percentage }}%</span>
+              </span>
+              </a>
+              <div></div>
+            </div>
+
           </div>
         </div>
 
