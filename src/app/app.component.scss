@@ -26,7 +26,7 @@
   min-height: calc(100vh - 200px);
   display: flex;
   flex-wrap: wrap;
-  align-content: flex-start; border-bottom: 1px solid green;
+  align-content: flex-start; border-bottom: 0px solid green;
   .sitem { border-bottom: 1px solid #ccc; padding: 10px; display: inline-block;
     margin: 10px 15px; margin-left: 0; cursor: pointer; font-size: 14px; text-decoration: none;
     background-color: #ccc; color: white;
@@ -37,8 +37,8 @@
       &.phone { height: 15px; margin: 0px 0 -3px; margin-right: 10px; }
       &.cv { height: 22px; margin: -5px 0; margin-right: 10px; }
     }
-    label { font-weight: 500; color: #777; margin-right: 5px; }
-    span { font-weight: 300; }
+    label { font-weight: 500; color: #555; margin-right: 5px; }
+    span { font-weight: 300; color: #555; }
   }
   .headline { font-weight: 600 }
 
@@ -59,6 +59,17 @@
       &-wrapper { display: inline-block; &.break { width: 100% } }
     }
    }
+   &.used {
+     .sitem { background-color: #fff; span { color: #444 } }
+   }
+   &.expreience {
+    $color: #666;
+    .headline { color: #607d8b; }
+    .sitem { background-color: transparent; border: 1px solid #ccc; }
+    .title1 { color: #777 }
+    .title2 { color: $color; font-weight: 600 }
+    .title3 { color: $color }
+   }
 }
 
 .name-first {
@@ -69,7 +80,7 @@
 }
 .menu-box {
   text-align: center; height: 300px; position: relative;
-  .zip { background-color: black; width: 2px; height: 100%; display: inline-block; }
+  .zip { background-color: #aaa; width: 2px; height: 100%; display: inline-block; }
   .content { position: absolute; top: 0px; left: 0px; width: 100%;
     display: flex; justify-content: center; align-items: center; flex-direction: column;
   }
@@ -80,10 +91,10 @@
     &.active {
     }
   }
-  .knot { display: inline-block; width: 20px; height: 20px; border: 1px solid black;
+  .knot { display: inline-block; width: 20px; height: 20px; border: 1px solid #999;
     background-color: white; margin: 10px 0 0;
     border-radius: 30px; }
-  @for $i from 1 through 3 {
+  @for $i from 1 through 4 {
     &[active="#{$i}"] .mitem:nth-child(#{$i}) {
       margin: 25px 0;
       span { color: cornflowerblue; }

@@ -123,6 +123,25 @@
           </div>
         </div>
 
+        <div class="section expreience" #section>
+          <div class="inner">
+            <div class="headline">Experience</div>
+            <div class="sitem-wrapper" *ngFor="let mitem of [
+              { title1: 'EMAKINA, WITTY COMMERCE', title2: 'Front-End Developer, 6 Months', title3: '2022' },
+              { title1: 'PIKTUS, WITTY COMMERCE', title2: 'Full-Stack Developer, 22 Months', title3: '2020' },
+              { title1: 'FREELANCER', title2: 'Full-Stack Developer, 12 Months', title3: '2019' },
+              { title1: 'ELİZ', title2: 'Full-Stack Developer, 6 Months', title3: '2018' },
+              { title1: 'MGA', title2: 'Full-Stack Developer, 6 Months', title3: '2018' },
+            ]">
+              <div class="sitem">
+                <div class="title1">{{ mitem.title1 }}</div>
+                <div class="title2">{{ mitem.title2 }}</div>
+                <div class="title3">{{ mitem.title3 }}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </ng-scrollbar>
 
     </div>
