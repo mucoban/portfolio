@@ -4,17 +4,17 @@
 }
 .row {
   display: flex; flex-wrap: wrap;
-  height: calc(100vh - 100px); margin: 50px 0;
+  height: calc(100vh - 0px); padding: 50px 0;
 }
 .wfull { width: 100%; }
 
-.column-menu { flex-grow: 0; padding: 50px 20px;  }
+.column-menu { flex-grow: 0; padding: 50px 20px; }
 .column-page { flex-grow: 1; padding: 50px 20px; height: 100%; position: relative }
 .picture-box {
   display: inline-block; box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.5);
   .inner {
-    padding: 20px; background-color: #eee; display: inline-block;
-    img { width: 200px; }
+    padding: 20px; background-color: #eee; display: inline-block; font-size: 0;
+    img { width: 200px; max-width: 100% }
   }
 }
 .badge {
@@ -27,14 +27,16 @@
   }
 }
 .section {
-  padding: 30px 0;
+  padding: 0px 20px 80px 0;
   min-height: calc(100vh - 200px);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start; border-bottom: 0px solid green;
+  .inner { max-width: 100%; }
   .sitem { border-bottom: 1px solid #ccc; padding: 10px; display: inline-block;
     margin: 10px 15px; margin-left: 0; cursor: pointer; font-size: 14px; text-decoration: none;
     background-color: #ccc; color: white;
+    max-width: 100%;
     img {
       height: 11px; margin-right: 10px;
       &.linkedin { height: 21px; margin: -4px 0; margin-right: 10px; }
@@ -43,7 +45,7 @@
       &.cv { height: 22px; margin: -5px 0; margin-right: 10px; }
     }
     label { font-weight: 500; color: #555; margin-right: 5px; }
-    span { font-weight: 300; color: #555; }
+    span { font-weight: 300; color: #555; word-break: break-word }
   }
   .headline { font-weight: 600 }
 
@@ -112,4 +114,27 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+ .column-menu { width: 90px; padding: 0 10px }
+ .column-page { padding: 0 0px 0 50px }
+ .picture-box { .inner { padding: 5px; } }
+ .row { padding: 30px 0 }
+ .section {
+    min-height: calc(100vh - 60px);
+    &.skills {
+      .sitem-wrapper.break { display: none }
+    }
+ }
+}
 
+@media only screen and (max-width: 400px) {
+
+  .section {
+    &.info {
+      .sitem {
+        span { display: block; margin-top: 10px;  }
+      }
+    }
+  }
+
+}
