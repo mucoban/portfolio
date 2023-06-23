@@ -8,24 +8,39 @@
         </div>
       </div>
       <div class="menu-box" [attr.active]="activeMitem">
-        <div class="zip"></div>
-        <div class="content">
-          <div class="mitem" (click)="onClickMitem(0)">
-            <div class="knot"></div>
-            <span>Info</span>
-          </div>
-          <div class="mitem" (click)="onClickMitem(1)">
-            <div class="knot"></div>
-            <span>Skills</span>
-          </div>
-          <div class="mitem" (click)="onClickMitem(2)">
-            <div class="knot"></div>
-            <span>I've used</span>
-          </div>
-          <div class="mitem" (click)="onClickMitem(3)">
-            <div class="knot"></div>
-            <span>Experience</span>
-          </div>
+        <div class="zip-svg">
+          <svg active-dot="1" viewBox="0 0 20 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="10" cy="3" r="1.5" fill="#000000"/>
+            <circle cx="10" cy="10" r="1.5" fill="#000000"/>
+            <circle cx="10" cy="17" r="1.5" fill="#000000"/>
+            <circle cx="10" cy="24" r="1.5" fill="#000000"/>
+            <rect x="9.7" y="3" width=".6" height="22" fill="#000000" />
+          </svg>
+        </div>
+
+<!--        <div class="zip"></div>-->
+        <div class="section-headlines">
+          <div class="section-headline" (click)="onClickMitem(0)" ><span>Info</span></div>
+          <div class="section-headline" (click)="onClickMitem(1)" ><span>Skills</span></div>
+          <div class="section-headline" (click)="onClickMitem(2)" ><span>I've used</span></div>
+          <div class="section-headline" (click)="onClickMitem(3)" ><span>Experience</span></div>
+<!--          <div class="mitem" (click)="onClickMitem(0)">-->
+<!--          <div class="mitem" (click)="onClickMitem(0)">-->
+<!--            <div class="knot"></div>-->
+<!--            <span>Info</span>-->
+<!--          </div>-->
+<!--          <div class="mitem" (click)="onClickMitem(1)">-->
+<!--            <div class="knot"></div>-->
+<!--            <span>Skills</span>-->
+<!--          </div>-->
+<!--          <div class="mitem" (click)="onClickMitem(2)">-->
+<!--            <div class="knot"></div>-->
+<!--            <span>I've used</span>-->
+<!--          </div>-->
+<!--          <div class="mitem" (click)="onClickMitem(3)">-->
+<!--            <div class="knot"></div>-->
+<!--            <span>Experience</span>-->
+<!--          </div>-->
         </div>
       </div>
     </div>

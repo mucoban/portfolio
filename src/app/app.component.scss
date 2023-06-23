@@ -1,3 +1,11 @@
+.zip-svg {
+  svg {
+    width: 80px;
+    circle { fill: #375982; transition: all .3s }
+    rect { fill: #375982 }
+  }
+}
+
 .container {
   max-width: 1170px; margin: auto;
 
@@ -87,10 +95,18 @@
 }
 .menu-box {
   text-align: center; height: 300px; position: relative;
-  .zip { background-color: #aaa; width: 2px; height: 100%; display: inline-block; }
-  .content { position: absolute; top: 0px; left: 0px; width: 100%;
-    display: flex; justify-content: center; align-items: center; flex-direction: column;
+  margin-top: 20px;
+  .section-headlines {
+    position: absolute;
+    top: 4px;
+    width: 100%;
+    text-align: left;
+    padding-left: 50%; font-size: 14px;
+    .section-headline {
+      padding-left: 15px; margin-bottom: 11px; cursor: pointer;
+    }
   }
+  .zip { background-color: #aaa; width: 2px; height: 100%; display: inline-block; }
   .mitem {
     cursor: pointer; transition: all .6s;
     span {    position: absolute; font-size: 14px; font-weight: 500; color: #444;
@@ -102,14 +118,22 @@
     background-color: white; margin: 10px 0 0;
     border-radius: 30px; }
   @for $i from 1 through 4 {
-    &[active="#{$i}"] .mitem:nth-child(#{$i}) {
-      margin: 25px 0;
-      span { color: cornflowerblue; }
-      .knot { border-color: cornflowerblue;
-        &::after { display: inline-block; margin-bottom: 1px;
-          content: ''; height: 10px; width: 10px; border-radius: 20px;
-          background-color: deepskyblue; }
+    &[active="#{$i}"] {
+
+      .zip-svg circle {
+        &:nth-child(#{$i}){ r: 2.5 }
       }
+
+      .mitem:nth-child(#{$i}) {
+        margin: 25px 0;
+        span { color: cornflowerblue; }
+        .knot { border-color: cornflowerblue;
+          &::after { display: inline-block; margin-bottom: 1px;
+            content: ''; height: 10px; width: 10px; border-radius: 20px;
+            background-color: deepskyblue; }
+        }
+      }
+
     }
   }
 }
