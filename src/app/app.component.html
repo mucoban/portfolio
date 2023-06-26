@@ -68,7 +68,7 @@
           </div>
           <div class="inner">
             <a class="sitem email" href="mailto:webdeveloper.mucahitcoban@gmail.com">
-              <img src="../assets/images/email.svg" alt="email">
+              <img src="./assets/images/email.svg" alt="email">
               <label>E-mail:</label>
               <span>webdeveloper.mucahitcoban@gmail.com</span>
             </a>
@@ -102,25 +102,29 @@
             <div class="headline">Skills</div>
 
             <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }" *ngFor="let mitem of [
-              { title: 'Html, scss', percentage: '95' },
-              { title: 'Javascript, Jquery', percentage: '95' },
-              { title: 'Angular', percentage: '90' },
+              { title: 'Angular', percentage: '2 years', icon: './assets/images/angular.svg' },
+              { title: 'Html, scss', percentage: '4 years', icon: './assets/images/html.svg', icon2: './assets/images/scss.svg' },
               { break: true },
-              { title: 'Codeigniter', percentage: '90' },
-              { title: 'Mysql', percentage: '90' },
-              { title: 'Php', percentage: '80' },
-              { title: 'Git', percentage: '80' },
+              { title: 'Javascript, Jquery', percentage: '4 years', icon: './assets/images/jquery.svg' },
+              { title: 'Php', percentage: '4 years', icon: './assets/images/php.svg'},
               { break: true },
-              { title: 'React', percentage: '50' },
-              { title: 'Node, Express', percentage: '50' },
-              { title: 'MongoDb', percentage: '50' },
+              { title: 'Codeigniter', percentage: '4 years', icon: './assets/images/codeigniter.svg' },
+              { title: 'Mysql', percentage: '4 years', icon: './assets/images/mysql.svg' },
+              { break: true },
+              { title: 'MongoDb',  percentage: '6 months', icon: './assets/images/mongodb.svg' },
+              { title: 'React',  percentage: '6 months', icon: './assets/images/react.svg' },
+              { break: true },
+              { title: 'Node, Express',  percentage: '6 months', icon: './assets/images/node.svg' },
+              { title: 'Git', percentage: '4 years', icon: './assets/images/git.svg' },
             ]">
               <a class="sitem p{{ mitem?.percentage }}" *ngIf="!mitem?.break">
-                <span class="bar"></span>
-                <span class="content">
-                <label>{{ mitem?.title }}</label>
-              <span>{{ mitem?.percentage }}%</span>
-              </span>
+                  <img *ngIf="mitem.icon" src="{{ mitem.icon }}" alt="">
+                  <img *ngIf="mitem.icon2" src="{{ mitem.icon2 }}" alt="">
+                  <span class="bar"></span>
+                  <span class="content">
+                      <label>{{ mitem?.title }}</label>
+                      <span>{{ mitem?.percentage }}</span>
+                  </span>
               </a>
               <div></div>
             </div>

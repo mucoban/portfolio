@@ -1,8 +1,9 @@
 .zip-svg {
   svg {
     width: 80px;
-    circle { fill: #375982; transition: all .3s }
-    rect { fill: #375982 }
+    $color: #5c96b4;
+    circle { fill: $color; transition: all .3s }
+    rect { fill: $color }
   }
 }
 
@@ -23,7 +24,7 @@
   border-radius: 10px; overflow: hidden;
   .inner {
     display: inline-block; font-size: 0;
-    padding: 10px; background-color: #bcd1e3;
+    padding: 10px; background-color: #f6f6f6;
     img { width: 200px; max-width: 100% }
   }
 }
@@ -70,11 +71,12 @@
     .headline { color: #38930e; }
     .sitem {
       position: relative; background-color: transparent; border: 0px solid #aaa; margin-bottom: 0;
+      img { height: 30px; vertical-align: middle }
       label { color: #333 }
       .content { position: relative; color: #000; }
       .bar {
         position: absolute; bottom: 0px; left: -0px; width: 50%; height: 50%;
-        border: 2px solid #2196f3; border-width: 0 0 2px 2px;
+        //border: 2px solid #2196f3; border-width: 0 0 2px 2px;
       }
       @for $i from 1 through 20 {
         &.p#{$i * 5} { .bar { width: #{$i * 5 + '%'} } }
