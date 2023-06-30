@@ -1,3 +1,4 @@
+$headline-color: #607d8b;
 .zip-svg {
   svg {
     width: 80px;
@@ -68,7 +69,7 @@
 
    &.info { }
    &.skills {
-    .headline { color: #38930e; }
+    .headline { color: $headline-color; }
     .sitem {
       position: relative; background-color: transparent; border: 0px solid #aaa; margin-bottom: 0;
       img { height: 30px; vertical-align: middle }
@@ -85,11 +86,16 @@
     }
    }
    &.used {
-     .sitem { background-color: #fff; span { color: #444 } }
+     .headline { color: $headline-color }
+     .sitem {
+       background-color: #fff; border: 0; text-align: center;
+       span { color: #444 }
+       img { height: 40px; vertical-align: middle; margin: 0 0 10px 0 }
+     }
    }
    &.expreience {
     $color: #666;
-    .headline { color: #607d8b; }
+    .headline { color: $headline-color; }
     .sitem { background-color: transparent; border: 1px solid #ccc; }
     .title1 { color: #777 }
     .title2 { color: $color; font-weight: 600 }

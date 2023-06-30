@@ -134,19 +134,23 @@
 
         <div class="section used" #section>
           <div class="inner">
-            <div class="headline">I have used</div>
-            <a class="sitem" *ngFor="let mitem of [
-              { title: 'Linux, Mac, Windows' },
-              { title: 'Apache Web Server' },
-              { title: 'Putty' },
-              { title: 'Github' },
-              { title: 'Bitbucket' },
-              { title: 'Slack' },
-              { title: 'Trello' },
-              { title: 'Jira' },
-              { title: 'Photoshop' },
-              { title: 'Adobe xd' },
+            <div class="headline">I have used so far</div>
+            <a class="sitem"  title="{{ mitem.title }}" *ngFor="let mitem of [
+              { title: 'Mac', icon: './assets/images/apple.svg' },
+              { title: 'Linux', icon: './assets/images/linux.svg' },
+              { title: 'Windows', icon: './assets/images/windows.svg' },
+              { title: 'Apache', icon: './assets/images/apache.svg' },
+              { title: 'Putty', icon: './assets/images/putty.svg' },
+              { title: 'Github', icon: './assets/images/github-2.svg' },
+              { title: 'Bitbucket', icon: './assets/images/bitbucket.svg' },
+              { title: 'Slack', icon: './assets/images/slack.svg' },
+              { title: 'Trello', icon: './assets/images/trello.svg' },
+              { title: 'Jira', icon: './assets/images/jira.svg' },
+              { title: 'Photoshop', icon: './assets/images/photoshop.svg' },
+              { title: 'Adobe XD', icon: './assets/images/adobe-xd.svg' },
             ]">
+              <img *ngIf="mitem.icon" src="{{ mitem.icon }}">
+              <br>
               <span>{{ mitem.title }}</span>
             </a>
           </div>
