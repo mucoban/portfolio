@@ -160,17 +160,32 @@
           <div class="inner">
             <div class="headline">Experience</div>
             <div class="sitem-wrapper" *ngFor="let mitem of [
-              { title1: 'SOFTMAYA', title2: 'Full-Stack Developer, 3 Months and Going On', title3: '2022' },
-              { title1: 'EMAKINA, WITTY COMMERCE', title2: 'Front-End Developer, 6 Months', title3: '2022' },
-              { title1: 'PIKTUS, WITTY COMMERCE', title2: 'Full-Stack Developer, 22 Months', title3: '2020' },
-              { title1: 'FREELANCER', title2: 'Full-Stack Developer, 12 Months', title3: '2019' },
-              { title1: 'ELİZ', title2: 'Full-Stack Developer, 6 Months', title3: '2018' },
-              { title1: 'MGA', title2: 'Full-Stack Developer, 6 Months', title3: '2018' },
+              { title1: 'SOFTMAYA', title2: 'Full-Stack Developer, 8 Months and Going On', title3: '2022',
+                description: 'I am one of the three persons in a full-stack developer team who provide development and maintenance of ' +
+                 'gambling sites <a href=\'https://rocknreels.com\' target=\'_blank\'>rocknreels.com</a> and <a href=\'https://stakebillion.com\' target=\'_blank\'>stakebillion.com</a> on both front-end and back-end sides. We use angular for front-end and node, express,' +
+                  ' mysql for back-end side.'
+              },
+              { title1: 'EMAKINA, WITTY COMMERCE', title2: 'Front-End Developer, 6 Months', title3: '2022',
+                description: 'I was a member of a front-end team which developed in a dev/ops system to e-commerce site <a href=\'https://lego.com\' target=\'_blank\'>lego.com</a> and others. I used angular, spartacus, jira at this job.'
+              },
+              { title1: 'PIKTUS, WITTY COMMERCE', title2: 'Full-Stack Developer, 22 Months', title3: '2020',
+                description: 'I was the only developer in the company who developed websites and cms panels from adobe xd designs that were given to me. I worked as a full-stack developer. I used angular, jquery, php, codeigniter, wordpress, scss, mysql, depending on the project I worked on. Some of the websites I developed are <a href=\'https://hangardan.com\' target=\'_blank\'>hangardan.com</a> and <a href=\'https://creavit.com.tr\' target=\'_blank\'>creavit.com.tr</a>'
+              },
+              { title1: 'FREELANCER', title2: 'Full-Stack Developer, 12 Months', title3: '2019',
+                description: 'I worked as a freelance developer. I used wordpress, php, codeigniter, mysql to develop projects for my clients.'
+              },
+              { title1: 'ELİZ', title2: 'Full-Stack Developer, 6 Months', title3: '2018',
+                description: 'I worked as a full-stack developer. I developed websites and cms panels from photoshop designs using php, codeigniter and mysql.'
+              },
+              { title1: 'MGA', title2: 'Full-Stack Developer, 6 Months', title3: '2018',
+                description: 'I worked as a full-stack developer. I developed websites and cms panels from photoshop designs using php, codeigniter and mysql.'
+              },
             ]">
               <div class="sitem">
                 <div class="title1">{{ mitem.title1 }}</div>
                 <div class="title2">{{ mitem.title2 }}</div>
                 <div class="title3">{{ mitem.title3 }}</div>
+                <div class="description" [innerHTML]="mitem.description"></div>
               </div>
             </div>
           </div>

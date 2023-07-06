@@ -58,6 +58,13 @@ $headline-color: #607d8b;
     }
     label { font-weight: 500; color: #555; margin-right: 5px; }
     span { font-weight: 300; color: #555; word-break: break-word }
+    .description {
+      color: #666; margin-top: 5px;
+      ::ng-deep {
+        a { color: #2158c4 }
+      }
+    }
+
     &.email {
       img {
         height: 26px; vertical-align: top; margin-top: -5px; margin-bottom: -4px;
@@ -96,7 +103,7 @@ $headline-color: #607d8b;
    &.expreience {
     $color: #666;
     .headline { color: $headline-color; }
-    .sitem { background-color: transparent; border: 1px solid #ccc; }
+    .sitem { background-color: transparent; border: 1px solid #ccc; width: 100% }
     .title1 { color: #777 }
     .title2 { color: $color; font-weight: 600 }
     .title3 { color: $color }
