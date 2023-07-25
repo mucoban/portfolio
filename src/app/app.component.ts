@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, NgZone, OnDestroy, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {NgScrollbar} from "ngx-scrollbar";
 import {Subject, takeUntil, tap} from "rxjs";
+import {experience, skills, used} from "../data";
 
 @Component({
   selector: 'app-root',
@@ -15,6 +16,10 @@ export class AppComponent implements AfterViewInit, OnDestroy {
   private destroy$ = new Subject<boolean>()
   @ViewChild(NgScrollbar, { static: true }) scrollbarRef: NgScrollbar;
   @ViewChildren("section") sections: QueryList<any>
+
+  skills = skills
+  used = used
+  experience = experience
 
   constructor(private ngZone: NgZone) {}
 
