@@ -27,65 +27,64 @@
         </div>
       </div>
     </div>
-    <div class="column-page">
-      <ng-scrollbar [autoHeightDisabled]="false">
-        <div class="section info" #section>
-          <div class="badge">
-            <div class="name-first">
-              <span class="i1">Mücahit</span>
-              <span class="i2">Çoban</span>
+    <div #columnPage class="column-page">
+          <div class="section info" #section>
+            <div class="badge">
+              <div class="name-first">
+                <span class="i1">Mücahit</span>
+                <span class="i2">Çoban</span>
+              </div>
+              <div class="name-second">
+                Full-stack Developer
+              </div>
+              <div class="desc">
+                Hi, I'm Mücahit. I am a self-taught, 4 years experienced full-stack developer.
+                I see myself between mid-level and senior level. I live in İzmir, Turkey, born in 1991.
+                I speak English fluently.
+                I can build a restful api, a cms panel and  a front-end project from begining to end and
+                integrate them all, using angular, react, node and express, mongodb, php, mysql.
+                Or I can do bugfixing and development of existing projects like this.
+                Please contact me using my e-mail or phone.
+                You may also choose to chat with me, clicking the chat sign at bottom-right of this page.
+              </div>
             </div>
-            <div class="name-second">
-              Full-stack Developer
-            </div>
-            <div class="desc">
-              Hi, I'm Mücahit. I am a self-taught, 4 years experienced full-stack developer.
-              I see myself between mid-level and senior level. I live in İzmir, Turkey, born in 1991.
-              I speak English fluently.
-              I can build a restful api, a cms panel and  a front-end project from begining to end and
-              integrate them all, using angular, react, node and express, mongodb, php, mysql.
-              Or I can do bugfixing and development of existing projects like this.
-              Please contact me using my e-mail or phone.
-              You may also choose to chat with me, clicking the chat sign at bottom-right of this page.
+            <div class="inner">
+              <a class="sitem email" href="mailto:webdeveloper.mucahitcoban@gmail.com">
+                <img src="./assets/images/email.svg" alt="email">
+                <label>E-mail:</label>
+                <span>webdeveloper.mucahitcoban@gmail.com</span>
+              </a>
+              <a class="sitem" href="tel:00">
+                <img class="phone" src="./assets/images/phone.svg" alt="phone">
+                <label>Phone:</label>
+                <span>+90 *** *** ** 81</span>
+              </a>
+              <div class="wfull"></div>
+              <a class="sitem" target="_blank" href="https://www.linkedin.com/in/front-end-developer-mucahit-coban/">
+                <img class="linkedin" src="./assets/images/linkedin.svg" alt="linkedin">
+                <label>Linkedin:</label>
+                <span>linkedin.com</span>
+              </a>
+              <a class="sitem" target="_blank" href="https://github.com/mucoban">
+                <img class="github" src="./assets/images/github.svg" alt="github">
+                <label>Github:</label>
+                <span>github.com/mucoban</span>
+              </a>
+              <div class="wfull"></div>
+              <a class="sitem" target="_blank" href="https://mucoban.github.io/portfolio">
+                <img class="cv" src="./assets/images/cv.svg" alt="cv">
+                <label>Website:</label>
+                <span>mucoban.github.io/portfolio</span>
+              </a>
             </div>
           </div>
-          <div class="inner">
-            <a class="sitem email" href="mailto:webdeveloper.mucahitcoban@gmail.com">
-              <img src="./assets/images/email.svg" alt="email">
-              <label>E-mail:</label>
-              <span>webdeveloper.mucahitcoban@gmail.com</span>
-            </a>
-            <a class="sitem" href="tel:00">
-              <img class="phone" src="./assets/images/phone.svg" alt="phone">
-              <label>Phone:</label>
-              <span>+90 *** *** ** 81</span>
-            </a>
-            <div class="wfull"></div>
-            <a class="sitem" target="_blank" href="https://www.linkedin.com/in/front-end-developer-mucahit-coban/">
-              <img class="linkedin" src="./assets/images/linkedin.svg" alt="linkedin">
-              <label>Linkedin:</label>
-              <span>linkedin.com</span>
-            </a>
-            <a class="sitem" target="_blank" href="https://github.com/mucoban">
-              <img class="github" src="./assets/images/github.svg" alt="github">
-              <label>Github:</label>
-              <span>github.com/mucoban</span>
-            </a>
-            <div class="wfull"></div>
-            <a class="sitem" target="_blank" href="https://mucoban.github.io/portfolio">
-              <img class="cv" src="./assets/images/cv.svg" alt="cv">
-              <label>Website:</label>
-              <span>mucoban.github.io/portfolio</span>
-            </a>
-          </div>
-        </div>
 
-        <div class="section skills" #section>
-          <div class="inner">
-            <div class="headline">Skills</div>
+          <div class="section skills" #section>
+            <div class="inner">
+              <div class="headline">Skills</div>
 
-            <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }" *ngFor="let mitem of skills">
-              <a class="sitem p{{ mitem?.percentage }}" *ngIf="!mitem?.break">
+              <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }" *ngFor="let mitem of skills">
+                <a class="sitem p{{ mitem?.percentage }}" *ngIf="!mitem?.break">
                   <img *ngIf="mitem.icon" src="{{ mitem.icon }}" alt="">
                   <img *ngIf="mitem.icon2" src="{{ mitem.icon2 }}" alt="">
                   <span class="bar"></span>
@@ -93,40 +92,37 @@
                       <label>{{ mitem?.title }}</label>
                       <span>{{ mitem?.percentage }}</span>
                   </span>
-              </a>
-              <div></div>
+                </a>
+                <div></div>
+              </div>
+
             </div>
-
           </div>
-        </div>
 
-        <div class="section used" #section>
-          <div class="inner">
-            <div class="headline">I have used so far</div>
-            <a class="sitem"  title="{{ mitem.title }}" *ngFor="let mitem of used">
-              <img *ngIf="mitem.icon" src="{{ mitem.icon }}">
-              <br>
-              <span>{{ mitem.title }}</span>
-            </a>
+          <div class="section used" #section>
+            <div class="inner">
+              <div class="headline">I have used so far</div>
+              <a class="sitem"  title="{{ mitem.title }}" *ngFor="let mitem of used">
+                <img *ngIf="mitem.icon" src="{{ mitem.icon }}">
+                <br>
+                <span>{{ mitem.title }}</span>
+              </a>
+            </div>
           </div>
-        </div>
 
-        <div class="section expreience" #section>
-          <div class="inner">
-            <div class="headline">Experience</div>
-            <div class="sitem-wrapper" *ngFor="let mitem of experience">
-              <div class="sitem">
-                <div class="title1">{{ mitem.title1 }}</div>
-                <div class="title2">{{ mitem.title2 }}</div>
-                <div class="title3">{{ mitem.title3 }}</div>
-                <div class="description" [innerHTML]="mitem.description"></div>
+          <div class="section expreience" #section>
+            <div class="inner">
+              <div class="headline">Experience</div>
+              <div class="sitem-wrapper" *ngFor="let mitem of experience">
+                <div class="sitem">
+                  <div class="title1">{{ mitem.title1 }}</div>
+                  <div class="title2">{{ mitem.title2 }}</div>
+                  <div class="title3">{{ mitem.title3 }}</div>
+                  <div class="description" [innerHTML]="mitem.description"></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-      </ng-scrollbar>
-
     </div>
   </div>
 </div>

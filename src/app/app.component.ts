@@ -1,6 +1,4 @@
-import {AfterViewInit, Component, NgZone, OnDestroy, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {NgScrollbar} from "ngx-scrollbar";
-import {Subject, takeUntil, tap} from "rxjs";
+import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
 import {experience, skills, used} from "../data";
 
 @Component({
@@ -8,89 +6,24 @@ import {experience, skills, used} from "../data";
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterViewInit, OnDestroy {
-  private timer: any
+export class AppComponent {
   activeMitem: number = 1
-  private skipEventListener: boolean;
-  private oldScrollLinePosition: number = 0
-  private destroy$ = new Subject<boolean>()
-  @ViewChild(NgScrollbar, { static: true }) scrollbarRef: NgScrollbar;
+  @ViewChild("columnPage") columnPage: ElementRef
   @ViewChildren("section") sections: QueryList<any>
 
   skills = skills
   used = used
   experience = experience
 
-  constructor(private ngZone: NgZone) {}
-
-  ngAfterViewInit() {
-    this.scrollbarRef.verticalScrolled
-      .pipe(
-        takeUntil(this.destroy$),
-        tap((e: any) => this.ngZone.run(() => {
-            if (this.skipEventListener) {
-              return
-            }
-            const heightLimit = window.innerHeight - 200
-            const parentScrollTopLine = e.target.scrollTop + heightLimit / 2
-            console.log('parentScrollTopLine', parentScrollTopLine)
-            this.sections.map((section, index) => {
-               const sectionOffsetTop = section.nativeElement.offsetTop
-               if (1 || section.nativeElement.scrollHeight === heightLimit) {
-                 const sectionBottom = sectionOffsetTop + section.nativeElement.scrollHeight
-                 const sectionBottomUpper = sectionBottom - heightLimit / 2
-                 let addToIndex = 0
-
-                 if (parentScrollTopLine >= sectionBottomUpper
-                  && parentScrollTopLine <= sectionBottom
-                 ) {
-                    addToIndex = 1
-                 }
-                 else if (parentScrollTopLine >= sectionOffsetTop
-                  && parentScrollTopLine <= sectionOffsetTop + heightLimit / 2
-                 ) {
-                    addToIndex = -1
-                 }
-
-                 if (addToIndex) {
-                   const nextSectionIndex = index + addToIndex
-                   const nextSection = this.sections.find((s, index) => index === nextSectionIndex )
-                   if (nextSection) {
-                     this.activeMitem = nextSectionIndex + 1
-                     this.scroll({ top: nextSection.nativeElement.offsetTop, duration: 600 })
-                   }
-                 }
-               }
-            })
-
-          }),
-        ),
-        tap((e) => {
-            this.oldScrollLinePosition = e.target.scrollTop
-        })
-      )
-      .subscribe();
-  }
-
-  ngOnDestroy() {
-    this.destroy$.next(true)
-    this.destroy$.unsubscribe()
-  }
+  constructor() {}
 
   onClickMitem(sectionIndex: number) {
     const nextSection = this.sections.find((s, index) => index === sectionIndex)
     if (nextSection) {
       this.activeMitem = sectionIndex + 1
-      this.scroll({ top: nextSection.nativeElement.offsetTop, duration: 600 })
+      const scrollTop = this.sections.toArray()[sectionIndex].nativeElement.offsetTop
+      this.columnPage.nativeElement.scrollTo({ top: scrollTop, behavior: 'smooth' })
     }
-  }
-
-  private scroll(options: any) {
-    this.skipEventListener = true;
-    this.scrollbarRef.scrollTo(options)
-    clearTimeout(this.timer)
-    this.timer = setTimeout(() => { this.skipEventListener = false
-    }, options.duration + 100)
   }
 
 }
