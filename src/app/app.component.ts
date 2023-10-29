@@ -8,6 +8,7 @@ import {experience, skills, used} from "../data";
 })
 export class AppComponent {
   activeMitem: number = 1
+  timer: any
   @ViewChild("columnPage") columnPage: ElementRef
   @ViewChildren("section") sections: QueryList<any>
 
@@ -26,7 +27,11 @@ export class AppComponent {
   onClickMitem(sectionIndex: number, noScroll?: boolean) {
     const nextSection = this.sections.find((s, index) => index === sectionIndex)
     if (nextSection) {
-      this.activeMitem = sectionIndex + 1
+      if (!noScroll) this.activeMitem = sectionIndex + 1
+      else {
+        clearTimeout(this.timer)
+        this.timer = setTimeout(() => { this.activeMitem = sectionIndex + 1 }, 100)
+      }
       if (!noScroll) {
         const scrollTop = this.sections.toArray()[sectionIndex].nativeElement.offsetTop
         this.columnPage.nativeElement.scrollTo({ top: scrollTop, behavior: 'smooth' })
@@ -41,7 +46,7 @@ export class AppComponent {
     this.sections.map((section, index: number) => {
       const offsetBottom = section.nativeElement.offsetTop + section.nativeElement.offsetHeight
       if (scrollTop > section.nativeElement.offsetTop && scrollTop < offsetBottom) {
-          this.onClickMitem(index, true)
+        this.onClickMitem(index, true)
       }
     })
 

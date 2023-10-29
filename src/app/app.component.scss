@@ -2,7 +2,7 @@ $headline-color: #607d8b;
 .zip-svg {
   svg {
     width: 80px;
-    $color: #5c96b4;
+    $color: #1174c4;
 
     circle {
       fill: $color;
@@ -378,7 +378,6 @@ $headline-color: #607d8b;
           font-weight: 500;
           font-size: 18px;
           margin-bottom: 7px;
-          color: #417d9a;
         }
       }
 
@@ -390,7 +389,8 @@ $headline-color: #607d8b;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-right: -72px;
+  margin-right: -92px;
+  padding-left: 20px;
 
   &.inner {
   }
@@ -407,16 +407,18 @@ $headline-color: #607d8b;
   cursor: pointer;
 
   &.side-button {
-    margin: -10px 0;
+    margin: 30px 0;
     transition: all .2s;
     opacity: .7;
+    transform: rotate(45deg);
+    transform-origin: 53% 50%;
 
     img {
-      width: 60px
+      width: 40px
     }
 
     &.down {
-      transform: rotate(180deg)
+      transform: rotate(225deg)
     }
 
     &.disabled {
