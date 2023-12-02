@@ -398,6 +398,12 @@ $headline-color: #607d8b;
   &.mobile {
     display: none;
     margin-top: 40px;
+    margin-right: 0px;
+    padding-left: 0px;
+
+    .side-button {
+      margin: 15px 0;
+    }
   }
 }
 
