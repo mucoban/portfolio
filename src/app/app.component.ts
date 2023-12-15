@@ -1,5 +1,5 @@
 import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {experience, skills, used} from "../data";
+import {experience, skills, sideWorks} from "../data";
 
 @Component({
   selector: 'app-root',
@@ -13,8 +13,8 @@ export class AppComponent {
   @ViewChildren("section") sections: QueryList<any>
 
   skills = skills
-  used = used
   experience = experience
+  sideWorks = sideWorks
 
   constructor() {}
 

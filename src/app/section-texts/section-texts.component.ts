@@ -33,8 +33,8 @@ export class SectionTextsComponent {
   sts = {
     info: 1,
     skills: 2,
-    sideWorks: 3,
-    experience: 4,
+    experience: 3,
+    sideWorks: 4,
   }
 
   constructor() { }

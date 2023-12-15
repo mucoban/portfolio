@@ -21,21 +21,6 @@ export const experience = [
   },
 ]
 
-export const used = [
-  { title: 'Mac', icon: './assets/images/apple.svg' },
-  { title: 'Linux', icon: './assets/images/linux.svg' },
-  { title: 'Windows', icon: './assets/images/windows.svg' },
-  { title: 'Apache', icon: './assets/images/apache.svg' },
-  { title: 'Putty', icon: './assets/images/putty.svg' },
-  { title: 'Github', icon: './assets/images/github-2.svg' },
-  { title: 'Bitbucket', icon: './assets/images/bitbucket.svg' },
-  { title: 'Slack', icon: './assets/images/slack.svg' },
-  { title: 'Trello', icon: './assets/images/trello.svg' },
-  { title: 'Jira', icon: './assets/images/jira.svg' },
-  { title: 'Photoshop', icon: './assets/images/photoshop.svg' },
-  { title: 'Adobe XD', icon: './assets/images/adobe-xd.svg' },
-]
-
 export const skills = [
   { title: 'Angular', percentage: '2 years', icon: './assets/images/angular.svg' },
   { title: 'Html, scss', percentage: '4 years', icon: './assets/images/html.svg', icon2: './assets/images/scss.svg' },
@@ -51,4 +36,12 @@ export const skills = [
   { break: true },
   { title: 'Node, Express',  percentage: '6 months', icon: './assets/images/node.svg' },
   { title: 'Git', percentage: '4 years', icon: './assets/images/git.svg' },
+]
+
+export const sideWorks = [
+  {
+    title1: 'CHAT ON ANGULAR',
+    title2: 'Instant chap app developed on angular and firebase',
+    description: '<a href="https://github.com/mucoban/chat-on-angular" target="_blank">github.com/mucoban/chat-on-angular</a>'
+  },
 ]
