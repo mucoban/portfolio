@@ -392,7 +392,8 @@ $headline-color: #607d8b;
   margin-right: -92px;
   padding-left: 20px;
 
-  &.inner {
+  .inner {
+    text-align: center;
   }
 
   &.mobile {

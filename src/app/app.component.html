@@ -140,6 +140,7 @@
       <button class="btn side-button" [ngClass]="{ 'disabled': activeMitem < 2 }" (click)="goToPrevNextSection()">
         <img src="./assets/images/up4.svg" alt="up"/>
       </button>
+      <app-secion-texts [currentSt]="activeMitem" />
       <button class="btn side-button down" [ngClass]="{ 'disabled': activeMitem > 3 }" (click)="goToPrevNextSection(true)">
         <img src="./assets/images/up4.svg" alt="up"/>
       </button>
