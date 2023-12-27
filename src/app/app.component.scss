@@ -443,12 +443,20 @@ $headline-color: #607d8b;
 
 @media only screen and (max-width: 1200px) {
   .column-menu {
-    width: 90px;
-    padding: 0 10px
+    width: 100px;
+    padding: 0 10px;
+    margin: -30px 0;
+    background-color: #e0e0e0;
   }
   .side-buttons {
-    &.mobile { display: flex }
+    &.mobile {
+      display: flex;
+
+      img { width: 20px}
+
+    }
   }
+
   .column-page {
     padding: 0 0px 0 20px
   }
@@ -474,13 +482,13 @@ $headline-color: #607d8b;
   .zip-svg {
     svg {
       width: 85px;
-      margin-left: -50px;
+      margin-left: -76px;
     }
   }
 
   .menu-box {
     .section-headlines {
-      padding-left: 10px; top: 5px;
+      padding-left: 0px; top: 5px;
       .section-headline {
         margin-bottom: 13px; font-size: 14px; white-space: nowrap;
         font-weight: 500;

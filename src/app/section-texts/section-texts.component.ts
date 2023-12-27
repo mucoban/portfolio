@@ -6,6 +6,7 @@ import {Component, Input, ViewEncapsulation} from "@angular/core";
     .main-holder {
       display: block;
       width: 157px;
+      margin-bottom: -8px;
     }
     svg {
       height: 30px;
