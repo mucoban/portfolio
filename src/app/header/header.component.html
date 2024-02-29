@@ -1,0 +1,13 @@
+<div class="header" [ngClass]="{ 'fixed': fixedHeader }">
+  <div class="navs">
+    <div class="nav" *ngFor="let item of [
+      { title: 'Info' },
+      { title: 'Skills' },
+      { title: 'Experience' },
+      { title: 'Side Works' },
+    ]; let index = index">
+      <a (click)="onGoToSection(index)" [ngClass]="{ 'active': activeNavIndex === index }">{{ item.title }}</a>
+    </div>
+  </div>
+</div>
+<div class="header-placeholder"></div>

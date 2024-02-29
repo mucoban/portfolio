@@ -1,10 +1,11 @@
-import {Component, ElementRef, QueryList, ViewChild, ViewChildren} from '@angular/core';
-import {experience, skills, sideWorks} from "../data";
+import {Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation} from '@angular/core';
+import {experience, sideWorks, skills} from "../data";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
+  encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent {
   activeMitem: number = 1
@@ -39,17 +40,9 @@ export class AppComponent {
     }
   }
 
-  onScrollColumnPage(event: any) {
-    const targetHeightD2 = event.target.offsetHeight / 2
-    const scrollTop = event.target.scrollTop + targetHeightD2
-
-    this.sections.map((section, index: number) => {
-      const offsetBottom = section.nativeElement.offsetTop + section.nativeElement.offsetHeight
-      if (scrollTop > section.nativeElement.offsetTop && scrollTop < offsetBottom) {
-        this.onClickMitem(index, true)
-      }
-    })
-
+  onGoToSection(index: number) {
+    const scrollTo = index === 0 ? 0 : this.sections.get(index).nativeElement.offsetTop - 58
+    window.scrollTo({ top: scrollTo, behavior: "smooth" })
   }
 
 }

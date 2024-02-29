@@ -8,6 +8,7 @@ import {StInfoComponent} from "./section-texts/svg-components/st-info.component"
 import {StSkillsComponent} from "./section-texts/svg-components/st-skills.component";
 import {StExperienceComponent} from "./section-texts/svg-components/st-experience.component";
 import {StSideWorksComponent} from "./section-texts/svg-components/st-side-works.component";
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import {StSideWorksComponent} from "./section-texts/svg-components/st-side-works
     StSkillsComponent,
     StExperienceComponent,
     StSideWorksComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

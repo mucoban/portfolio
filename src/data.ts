@@ -24,17 +24,16 @@ export const experience = [
 export const skills = [
   { title: 'Angular', percentage: '2 years', icon: './assets/images/angular.svg' },
   { title: 'Html, scss', percentage: '4 years', icon: './assets/images/html.svg', icon2: './assets/images/scss.svg' },
-  { break: true },
   { title: 'Javascript, Jquery', percentage: '4 years', icon: './assets/images/jquery.svg' },
-  { title: 'Php', percentage: '4 years', icon: './assets/images/php.svg'},
   { break: true },
+  { title: 'Php', percentage: '4 years', icon: './assets/images/php.svg'},
   { title: 'Codeigniter', percentage: '4 years', icon: './assets/images/codeigniter.svg' },
   { title: 'Mysql', percentage: '4 years', icon: './assets/images/mysql.svg' },
   { break: true },
   { title: 'MongoDb',  percentage: '6 months', icon: './assets/images/mongodb.svg' },
   { title: 'React',  percentage: '6 months', icon: './assets/images/react.svg' },
-  { break: true },
   { title: 'Node, Express',  percentage: '6 months', icon: './assets/images/node.svg' },
+  { break: true },
   { title: 'Git', percentage: '4 years', icon: './assets/images/git.svg' },
 ]
 

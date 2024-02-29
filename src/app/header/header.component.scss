@@ -1,0 +1,22 @@
+.header {
+  display: flex; justify-content: flex-end; padding: 50px 30px; transition: all .3s;
+  background: #f6f1ef;
+  position: absolute; width: 100%; top: 0; left: 0;
+
+  &.fixed {
+    position: fixed; background: white; padding: 10px 30px;
+    right: 0; width: 100%; border-bottom: 1px solid #ddd;
+  }
+  .navs { display: flex }
+  .nav {
+    padding: 10px 50px;
+    a {
+      padding: 1px 0px; cursor: pointer; display: inline-block; text-transform: uppercase;
+      font-weight: 400; color: #877979; font-size: 14px; font-weight: 600;
+      &.active {
+        border-bottom: 2px solid #877979;
+      }
+    }
+  }
+  &-placeholder { height: 136px }
+}
