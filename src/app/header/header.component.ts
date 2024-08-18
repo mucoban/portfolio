@@ -8,6 +8,7 @@ import {Component, EventEmitter, HostListener, Output} from '@angular/core';
 export class HeaderComponent {
 
   fixedHeader: boolean
+  mobileMenuOn: boolean
   activeNavIndex: number = 0
 
   @Output() goToSection = new EventEmitter<number>()
@@ -22,6 +23,7 @@ export class HeaderComponent {
   onGoToSection(index: number) {
     this.activeNavIndex = index
     this.goToSection.next(index)
+    if (this.mobileMenuOn) this.mobileMenuOn = false
   }
 
 }

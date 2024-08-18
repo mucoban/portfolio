@@ -1,12 +1,21 @@
-<div class="header" [ngClass]="{ 'fixed': fixedHeader }">
-  <div class="navs">
-    <div class="nav" *ngFor="let item of [
-      { title: 'Info' },
-      { title: 'Skills' },
-      { title: 'Experience' },
-      { title: 'Side Works' },
-    ]; let index = index">
-      <a (click)="onGoToSection(index)" [ngClass]="{ 'active': activeNavIndex === index }">{{ item.title }}</a>
+<div class="header" [ngClass]="{ 'fixed': fixedHeader, 'mobile-menu-on': mobileMenuOn }">
+  <div class="hamburger" (click)="mobileMenuOn = true">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <div class="navs" (click)="$event.target === $event.currentTarget ? mobileMenuOn = false : null">
+    <div class="navs-inner">
+      <div class="navs-holder">
+        <div class="nav" *ngFor="let item of [
+          { title: 'Info' },
+          { title: 'Skills' },
+          { title: 'Experience' },
+          { title: 'Side Works' },
+        ]; let index = index">
+          <a (click)="onGoToSection(index)" [ngClass]="{ 'active': activeNavIndex === index }">{{ item.title }}</a>
+        </div>
+      </div>
     </div>
   </div>
 </div>

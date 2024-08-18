@@ -1,13 +1,19 @@
 .header {
   display: flex; justify-content: flex-end; padding: 50px 30px; transition: all .3s;
   background: #f6f1ef;
-  position: absolute; width: 100%; top: 0; left: 0;
+  position: absolute; width: 100%; top: 0; left: 0; z-index: 10;
 
   &.fixed {
     position: fixed; background: white; padding: 10px 30px;
     right: 0; width: 100%; border-bottom: 1px solid #ddd;
+
+    .hamburger {
+      width: 35px; padding: 7px; gap: 4px;
+    }
   }
-  .navs { display: flex }
+  .navs {
+    &-holder { display: flex; }
+  }
   .nav {
     padding: 10px 50px;
     a {
@@ -18,5 +24,57 @@
       }
     }
   }
+  .hamburger {
+    $color: #887474;
+    border: 2px solid $color; border-radius: 5px;
+    width: 45px; padding: 12px; margin-right: 50px;
+    display: none; flex-direction: column; gap: 7px; cursor: pointer;
+    transition: all .4s;
+
+    span { height: 5px; background-color: $color; border-radius: 5px;  }
+  }
+
   &-placeholder { height: 136px }
+
+  @media screen and (max-width: 991px) {
+    padding: 20px 30px;
+
+    .navs {
+      display: block;
+      height: 100vh;
+      position: absolute;
+      right: 0;
+      width: 100%;
+      top: 0;
+      overflow: hidden;
+      pointer-events: none;
+
+      &-inner {
+        display: flex;
+        align-items: center;
+        background: #ffffff; height: 100%;
+        transform: translate(100%, 0px);
+        transition: all .3s;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(197,197,197,1);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(197,197,197,1);
+        box-shadow: 0px 0px 5px 0px rgba(197,197,197,1);
+      }
+
+      &-holder {
+        flex-direction: column;
+      }
+
+    }
+
+    .hamburger { display: flex; }
+
+    &.mobile-menu-on {
+      .navs {
+        pointer-events: initial;
+        &-inner {
+          transform: translate(30%, 0px);
+        }
+      }
+    }
+  }
 }
