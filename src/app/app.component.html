@@ -43,14 +43,26 @@
           Full-stack Developer
         </div>
         <div class="desc">
-          Hi, I'm Mücahit. I am a self-taught, 4 years experienced full-stack developer.
-          I see myself between mid-level and senior level. I live in İzmir, Turkey, born in 1991.
-          I speak English fluently.
-          I can build a restful api, a cms panel and  a front-end project from begining to end and
-          integrate them all, using angular, react, node and express, mongodb, php, mysql.
-          Or I can do bugfixing and development of existing projects like this.
-          Please contact me using my e-mail or phone.
-          You may also choose to chat with me, clicking the chat sign at bottom-right of this page.
+          Hi, I’m Mücahit, a frontend/fullstack developer with 5 years of professional experience. It shall be
+          indicated that most of my experience has been in the area of the frontend development.
+          I am a self-educated, 33 years old developer who has a friendly personality and lives in Aachen,
+          Germany.
+          <br>
+          <br>
+          I have been working in a German fintech company as a frontend developer for 1.5 years and still
+          continuing. I have lately been using technologies of vue3, vue2, vuetify, typescript, nuxt, openapi, docker,
+          git.
+          <br>
+          <br>
+          My coding journey started with wordpress and php long time ago. Then I learned jQuery, mysql
+          and codeigniter(a php framework) while building small corporate websites and admin panels. Then
+          I extended my skills to vanilla js, typescript and angular and worked on middle/high tech e-commerce
+          websites. Then I had spent some time trying to work as a freelancer, I became experience in node.js, express
+          and more mysql in this period. After finding out that freelancing was not suitable for me, I started to work
+          at my last job.
+          <br>
+          <br>
+          For a more detailed list of my tech stack, please scroll down.
         </div>
       </div>
       <div class="inner">
@@ -58,11 +70,6 @@
           <img src="./assets/images/email.svg" alt="email">
           <label>E-mail:</label>
           <span>webdeveloper.mucahitcoban@gmail.com</span>
-        </a>
-        <a class="sitem" href="tel:00">
-          <img class="phone" src="./assets/images/phone.svg" alt="phone">
-          <label>Phone:</label>
-          <span>+90 *** *** ** 81</span>
         </a>
         <div class="wfull"></div>
         <a class="sitem" target="_blank" href="https://www.linkedin.com/in/front-end-developer-mucahit-coban/">
@@ -76,11 +83,6 @@
           <span>github.com/mucoban</span>
         </a>
         <div class="wfull"></div>
-        <a class="sitem" target="_blank" href="https://mucoban.github.io/portfolio">
-          <img class="cv" src="./assets/images/cv.svg" alt="cv">
-          <label>Website:</label>
-          <span>mucoban.github.io/portfolio</span>
-        </a>
       </div>
   </div>
 </div>
@@ -88,7 +90,12 @@
 <div class="section skills" #section>
   <div class="container">
     <div class="inner">
-      <div class="headline">Skills</div>
+      <div class="headline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-stack" viewBox="0 0 16 16">
+          <path d="m14.12 10.163 1.715.858c.22.11.22.424 0 .534L8.267 15.34a.6.6 0 0 1-.534 0L.165 11.555a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0l5.317-2.66zM7.733.063a.6.6 0 0 1 .534 0l7.568 3.784a.3.3 0 0 1 0 .535L8.267 8.165a.6.6 0 0 1-.534 0L.165 4.382a.299.299 0 0 1 0-.535z"/>
+          <path d="m14.12 6.576 1.715.858c.22.11.22.424 0 .534l-7.568 3.784a.6.6 0 0 1-.534 0L.165 7.968a.299.299 0 0 1 0-.534l1.716-.858 5.317 2.659c.505.252 1.1.252 1.604 0z"/>
+        </svg>
+        Skills</div>
       <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }" *ngFor="let mitem of skills">
         <a class="sitem p{{ mitem?.percentage }}" *ngIf="!mitem?.break">
 <!--          <img *ngIf="mitem.icon" src="{{ mitem.icon }}" alt="">-->
@@ -108,7 +115,13 @@
 <div class="section expreience" #section>
   <div class="container">
     <div class="inner">
-      <div class="headline">Experience</div>
+      <div class="headline">
+        
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-briefcase-fill" viewBox="0 0 16 16">
+  <path d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v1.384l7.614 2.03a1.5 1.5 0 0 0 .772 0L16 5.884V4.5A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5"/>
+  <path d="M0 12.5A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5V6.85L8.129 8.947a.5.5 0 0 1-.258 0L0 6.85z"/>
+</svg>
+        Experience</div>
       <div class="sitem-wrapper" *ngFor="let mitem of experience">
         <div class="sitem">
           <div class="title1">{{ mitem.title1 }}</div>
@@ -124,7 +137,12 @@
 <div class="section side-works" #section>
   <div class="container">
     <div class="inner">
-      <div class="headline">Side Works</div>
+      <div class="headline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-file-earmark-code" viewBox="0 0 16 16">
+          <path d="M14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h5.5zm-3 0A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V4.5z"/>
+          <path d="M8.646 6.646a.5.5 0 0 1 .708 0l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L10.293 9 8.646 7.354a.5.5 0 0 1 0-.708m-1.292 0a.5.5 0 0 0-.708 0l-2 2a.5.5 0 0 0 0 .708l2 2a.5.5 0 0 0 .708-.708L5.707 9l1.647-1.646a.5.5 0 0 0 0-.708"/>
+        </svg>
+        Side Works</div>
       <div class="sitem-wrapper" *ngFor="let mitem of sideWorks">
         <div class="sitem">
           <div class="title1">{{ mitem.title1 }}</div>

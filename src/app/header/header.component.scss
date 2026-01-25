@@ -1,14 +1,18 @@
 .header {
   display: flex; justify-content: flex-end; padding: 50px 30px; transition: all .3s;
-  background: #f6f1ef;
+  background: #5089b2;
   position: absolute; width: 100%; top: 0; left: 0; z-index: 10;
 
   &.fixed {
-    position: fixed; background: white; padding: 10px 30px;
+    position: fixed; background: #535556; padding: 5px 30px;
     right: 0; width: 100%; border-bottom: 1px solid #ddd;
 
     .hamburger {
       width: 35px; padding: 7px; gap: 4px;
+    }
+
+    .nav a {
+      font-size: 12px;
     }
   }
   .navs {
@@ -18,14 +22,18 @@
     padding: 10px 50px;
     a {
       padding: 1px 0px; cursor: pointer; display: inline-block; text-transform: uppercase;
-      font-weight: 400; color: #877979; font-size: 14px; font-weight: 600;
+      font-weight: 400; color: #eee; font-size: 14px; font-weight: 600;
       &.active {
-        border-bottom: 2px solid #877979;
+        border-bottom: 2px solid #eee;
+      }
+
+      @media screen and (max-width: 991px) {
+        color: #333;
       }
     }
   }
   .hamburger {
-    $color: #887474;
+    $color: #eee;
     border: 2px solid $color; border-radius: 5px;
     width: 45px; padding: 12px; margin-right: 50px;
     display: none; flex-direction: column; gap: 7px; cursor: pointer;

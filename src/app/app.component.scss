@@ -1,4 +1,4 @@
-$headline-color: #607d8b;
+$headline-color: #555;
 
 .zip-svg {
   svg {
@@ -171,6 +171,10 @@ $headline-color: #607d8b;
 
   .headline {
     font-weight: 400; font-size: 30px; margin: 40px 0;
+
+    svg {
+      margin-bottom: -3px;
+    }
   }
 
   &.info {
@@ -182,7 +186,7 @@ $headline-color: #607d8b;
     background: #f3f3f3;
 
     .headline {
-      color: #b0b0b0;
+      color: $headline-color;
     }
 
     .sitem {
@@ -263,7 +267,7 @@ $headline-color: #607d8b;
     .sitem {
       background-color: transparent;
       border: 1px solid #ccc;
-      width: 100%
+      display: block;
     }
 
     .title1 {

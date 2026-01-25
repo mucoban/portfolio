@@ -1,7 +1,7 @@
-const urlCoA = 'https://mucoban.github.io/chat-on-angular/chat-on-angular'
+const urlCoA = 'https://mucoban.github.io/chat-on-angular'
 const iframe = document.createElement('iframe');
 window.addEventListener("message", function(event) {
-  event.data.map(p => {
+  event.data.map && event.data.map(p => {
     iframe.style[p.prop] = p.value;
   });
 });

@@ -1,0 +1,11 @@
+ongoing:
+ - icons are DONE / responsive styling, colors particularly DONE /update texts DONE / attach coa and push
+
+
+next:
+    - skils animated info texts
+    - iframe popups
+    - divide sections into components
+    - mouse icon change
+
+done:
