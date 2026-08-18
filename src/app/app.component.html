@@ -96,7 +96,7 @@
                     </svg>
                   Skills</div>
                   @for (mitem of skills; track mitem) {
-                    <div class="sitem-wrapper" [ngClass]="{ 'break': mitem?.break }">
+                    <div class="sitem-wrapper" [ngClass]="{ 'break': $safeNavigationMigration(mitem?.break) }">
                       @if (!mitem?.break) {
                         <a class="sitem p{{ mitem?.percentage }}">
                           <!--          <img *ngIf="mitem.icon" src="{{ mitem.icon }}" alt="">-->

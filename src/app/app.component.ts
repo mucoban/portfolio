@@ -1,4 +1,4 @@
-import {Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation} from '@angular/core';
+import {Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsulation, ChangeDetectionStrategy} from '@angular/core';
 import {experience, sideWorks, skills} from "../data";
 
 @Component({
@@ -6,6 +6,7 @@ import {experience, sideWorks, skills} from "../data";
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.scss'],
     encapsulation: ViewEncapsulation.ShadowDom,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class AppComponent {

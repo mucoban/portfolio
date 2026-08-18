@@ -1,4 +1,4 @@
-import {Component, Input, ViewEncapsulation} from "@angular/core";
+import {Component, Input, ViewEncapsulation, ChangeDetectionStrategy} from "@angular/core";
 
 @Component({
     selector: 'app-secion-texts',
@@ -34,6 +34,7 @@ import {Component, Input, ViewEncapsulation} from "@angular/core";
       }
     </div>
     `,
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class SectionTextsComponent {
