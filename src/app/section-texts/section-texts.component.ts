@@ -1,8 +1,8 @@
 import {Component, Input, ViewEncapsulation} from "@angular/core";
 
 @Component({
-  selector: 'app-secion-texts',
-  styles: [`
+    selector: 'app-secion-texts',
+    styles: [`
     .main-holder {
       display: block;
       width: 157px;
@@ -17,15 +17,16 @@ import {Component, Input, ViewEncapsulation} from "@angular/core";
       svg { height: 20px }
     }
   `],
-  encapsulation: ViewEncapsulation.ShadowDom,
-  template: `
+    encapsulation: ViewEncapsulation.ShadowDom,
+    template: `
     <div class="main-holder">
       <app-st-info *ngIf="currentSt === sts.info" />
       <app-st-skills *ngIf="currentSt === sts.skills" />
       <app-st-experience *ngIf="currentSt === sts.experience" />
       <app-st-side-works *ngIf="currentSt === sts.sideWorks" />
     </div>
-  `
+  `,
+    standalone: false
 })
 export class SectionTextsComponent {
 

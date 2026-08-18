@@ -1,8 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-st-experience',
-  styles: [`
+    selector: 'app-st-experience',
+    styles: [`
     svg {
       path {
         stroke-dasharray: 1000;
@@ -24,7 +24,7 @@ import {Component} from "@angular/core";
       to { stroke-dashoffset: 0 }
     }
   `],
-  template: `
+    template: `
       <svg id="egZXHhEFwiY1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            viewBox="0 0 336.001 83.3" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
           <path d="M80.3,13.819c0,0,6.7-25.383266-45-1.536587-12.161394,5.609456-20.802802,17.281-20.802802,17.281s-6.772851,1.494411-10.398198,1.136587c-8.222704-.811587,6.206626-6.318195,6.151-6.3-15.556385,5.088413-4.35,6.388413-4.35,6.388413s31.157981-5.270142,42.8-5.288413c7.383-.011587,21.9,3.688413,13.5,10.262413-.417493.326738,13.7-10.568-18.55-9.974-9.36774.172541-28.835088,3.613922-29.152802,4-28.720141,34.9,11.952802,35.8,30.765802,30.1.598962-.181475,29.887-11.372,40.223-19.126413"
@@ -44,7 +44,8 @@ import {Component} from "@angular/core";
                 transform="translate(0-.065362)" fill="none" stroke="#3f5787" stroke-linecap="round"
                 stroke-linejoin="round"/>
       </svg>
-  `
+  `,
+    standalone: false
 })
 export class StExperienceComponent {
 }

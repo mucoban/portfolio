@@ -2,10 +2,11 @@ import {Component, ElementRef, QueryList, ViewChild, ViewChildren, ViewEncapsula
 import {experience, sideWorks, skills} from "../data";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    encapsulation: ViewEncapsulation.ShadowDom,
+    standalone: false
 })
 export class AppComponent {
   activeMitem: number = 1

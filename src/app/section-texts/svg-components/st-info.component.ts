@@ -1,8 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-st-info',
-  styles: [`
+    selector: 'app-st-info',
+    styles: [`
     svg {
       path {
         stroke-dasharray: 1000;
@@ -21,7 +21,7 @@ import {Component} from "@angular/core";
       to { stroke-dashoffset: 0 }
     }
   `],
-  template: `
+    template: `
     <svg xmlns="http://www.w3.org/2000/svg"
          viewBox="0 0 170.2 70.301" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
         <path d="M9.8,23.716C-3.859386,41.381094,2.844179,53.602532,3.071053,54.039094C13.798053,74.68049,36.117968,65.447094,41.4,62.201c6.534502-3.861891,13.821034-11.215721,18.75-16.988c3.795717-4.445139,7.693398-11.272943,10.659-16.31C75.471376,20.983983,79.667,8.89,85.1,1.809c1.976721-2.576323,2.2,4.192-6.3,8.802-4.860025,2.635849-12.076197,5.951343-16.46,8.289-3.94,2.101-13.588,11.318001-13.794,16.701001-.078516,2.051698-.043285,3.202274,1.439,4.622999.915.877,3.62.5,4.885.743"
@@ -34,7 +34,8 @@ import {Component} from "@angular/core";
               transform="translate(0-.123403)" fill="none" stroke="#000000" stroke-linecap="round"
               stroke-linejoin="round"/>
     </svg>
-    `
+    `,
+    standalone: false
 })
 export class StInfoComponent {
 }

@@ -1,8 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-st-side-works',
-  styles: [`
+    selector: 'app-st-side-works',
+    styles: [`
     svg {
       path {
         stroke-dasharray: 1000;
@@ -27,7 +27,7 @@ import {Component} from "@angular/core";
       to { stroke-dashoffset: 0 }
     }
   `],
-  template: `
+    template: `
       <svg id="e3nH6q0DtCc1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            viewBox="0 0 402.401 77.301" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
           <path d="M76.292,14.498c0,0,11.785-19.957038-24.291-9.448-32.601,15.15-20.4,26.1-12.7,27.437.537457.093322,10.92,1.6191,15.6,2.313c21.45,3.958,0,20.289-2.9,22.497C34.32601,67.851344,18.122322,73.31487,11.101,74.9c-7.7,2.401-11,.233224-7.7-2.3C19.4,57.902,62.711,55.2,62.711,55.2"
@@ -53,7 +53,8 @@ import {Component} from "@angular/core";
                 transform="translate(0 0.000001)" fill="none" stroke="#3f5787" stroke-linecap="round"
                 stroke-linejoin="round"/>
       </svg>
-  `
+  `,
+    standalone: false
 })
 export class StSideWorksComponent {
 }

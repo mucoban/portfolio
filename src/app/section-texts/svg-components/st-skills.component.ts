@@ -1,8 +1,8 @@
 import {Component} from "@angular/core";
 
 @Component({
-  selector: 'app-st-skills',
-  styles: [`
+    selector: 'app-st-skills',
+    styles: [`
     svg {
       path {
         stroke-dasharray: 1000;
@@ -22,7 +22,7 @@ import {Component} from "@angular/core";
       to { stroke-dashoffset: 0 }
     }
   `],
-  template: `
+    template: `
       <svg id="e43U0AFzsyd1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
            viewBox="0 0 201.001 76.601" shape-rendering="geometricPrecision" text-rendering="geometricPrecision">
           <path d="M75.541,13.2c10.66-10.462468-7.337-12.953747-20.64-9.071c0,0-11.099999,3.671-18.382,9.071-15.952445,11.829606-3.718,17.4,2.782,18.613c4.649752.867715,12.642073,1.984969,15.6,2.743c17.7,4.536,4.963232,16.688726,0,20.128C46.404,60.572,41.061424,65.164437,33.859,68c-8.387388,3.302078-26.652,8.499-30.458,5.6-.207629-.158149-3.3-7.483,35.1-15.15c7.377247-1.472952,17.2893-3.0331,24.699-4.333"
@@ -35,7 +35,8 @@ import {Component} from "@angular/core";
           <path d="M164.097,59.8c0,0,14.004,1.57,22.252-4.311.266251-.189842-6.741742,3.374151-6.548,3.211c5.7-4.8-2.311086-5.772526-3.203-11.876C174.769264,34.309747,191.29837,31.1,199.484889,33.6"
                 fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-  `
+  `,
+    standalone: false
 })
 export class StSkillsComponent {
 }
