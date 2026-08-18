@@ -20,12 +20,20 @@ import {Component, Input, ViewEncapsulation} from "@angular/core";
     encapsulation: ViewEncapsulation.ShadowDom,
     template: `
     <div class="main-holder">
-      <app-st-info *ngIf="currentSt === sts.info" />
-      <app-st-skills *ngIf="currentSt === sts.skills" />
-      <app-st-experience *ngIf="currentSt === sts.experience" />
-      <app-st-side-works *ngIf="currentSt === sts.sideWorks" />
+      @if (currentSt === sts.info) {
+        <app-st-info />
+      }
+      @if (currentSt === sts.skills) {
+        <app-st-skills />
+      }
+      @if (currentSt === sts.experience) {
+        <app-st-experience />
+      }
+      @if (currentSt === sts.sideWorks) {
+        <app-st-side-works />
+      }
     </div>
-  `,
+    `,
     standalone: false
 })
 export class SectionTextsComponent {
