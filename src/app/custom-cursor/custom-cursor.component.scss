@@ -1,0 +1,50 @@
+* {
+  // cursor:
+  //   // url("https://img.icons8.com/doodle/48/000000/one-finger--v1.png"), auto;
+  cursor: none !important;
+}
+
+.cursor-ball {
+  width: 8px;
+  height: 8px;
+  background-color: #000;
+}
+
+.cursor-ball {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.cursor-outline {
+  width: 1rem;
+  height: 1rem;
+  border: 1px solid #000;
+  transition: all 0.3s ease-out;
+
+  // animation-duration: 0.4s;
+  // animation-iteration-count: infinite;
+  // animation-direction: alternate;
+  // animation-timing-function: linear;
+  // animation-fill-mode: both;
+
+  border-radius: 50%;
+  position: absolute;
+  z-index: 100;
+  pointer-events: none;
+  transform: translate(20px, 10px);
+
+  &.animating {
+    // animation-name: ballAni;
+  }
+}
+
+@keyframes ballAni {
+  from {
+    transform: translate(20px, 10px) scale(1.5);
+  }
+  to {
+    transform: translate(20px, 10px) scale(1);
+  }
+}

@@ -9,6 +9,7 @@ import { StSkillsComponent } from './section-texts/svg-components/st-skills.comp
 import { StExperienceComponent } from './section-texts/svg-components/st-experience.component';
 import { StSideWorksComponent } from './section-texts/svg-components/st-side-works.component';
 import { HeaderComponent } from './header/header.component';
+import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { HeaderComponent } from './header/header.component';
     StExperienceComponent,
     StSideWorksComponent,
     HeaderComponent,
+    CustomCursorComponent,
   ],
   imports: [BrowserModule, NgScrollbarModule],
   providers: [],
