@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "github-build": "ng build --configuration production --base-href 'https://mucoban.github.io/portfolio/'",
-    "github-deploy": "npx angular-cli-ghpages --dir=dist/portfolio --no-silent"
+    "github-deploy": "npx angular-cli-ghpages --dir=dist/portfolio/browser --no-silent"
   },
   "private": true,
   "dependencies": {

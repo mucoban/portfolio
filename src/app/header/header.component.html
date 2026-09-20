@@ -1,20 +1,38 @@
-<div class="header" [ngClass]="{ 'fixed': fixedHeader, 'mobile-menu-on': mobileMenuOn }">
+<div
+  class="header"
+  [ngClass]="{ fixed: fixedHeader, 'mobile-menu-on': mobileMenuOn }"
+>
   <div class="hamburger" (click)="mobileMenuOn = true">
     <span></span>
     <span></span>
     <span></span>
   </div>
-  <div class="navs" (click)="$event.target === $event.currentTarget ? mobileMenuOn = false : null">
+  <div
+    class="navs"
+    (click)="
+      $event.target === $event.currentTarget ? (mobileMenuOn = false) : null
+    "
+  >
     <div class="navs-inner">
       <div class="navs-holder">
-        @for (item of [
-          { title: 'Info' },
-          { title: 'Skills' },
-          { title: 'Experience' },
-          { title: 'Side Works' },
-          ]; track item; let index = $index) {
+        @for (
+          item of [
+            { title: "Info" },
+            { title: "Skills" },
+            { title: "Experience" },
+            { title: "Side Works" },
+          ];
+          track item;
+          let index = $index
+        ) {
           <div class="nav">
-            <a (click)="onGoToSection(index)" [ngClass]="{ 'active': activeNavIndex === index }">{{ item.title }}</a>
+            <a
+              (click)="onGoToSection(index)"
+              (mouseenter)="mouseEnterLink()"
+              (mouseleave)="mouseLeaveLink()"
+              [ngClass]="{ active: activeNavIndex === index }"
+              >{{ item.title }}</a
+            >
           </div>
         }
       </div>

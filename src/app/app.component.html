@@ -88,6 +88,8 @@
         <a
           class="sitem email"
           href="mailto:webdeveloper.mucahitcoban@gmail.com"
+          (mouseenter)="mouseEnterLink()"
+          (mouseleave)="mouseLeaveLink()"
         >
           <img src="./assets/images/email.svg" alt="email" />
           <label>E-mail:</label>
@@ -98,6 +100,8 @@
           class="sitem"
           target="_blank"
           href="https://www.linkedin.com/in/front-end-developer-mucahit-coban/"
+          (mouseenter)="mouseEnterLink()"
+          (mouseleave)="mouseLeaveLink()"
         >
           <img
             class="linkedin"
@@ -107,7 +111,13 @@
           <label>Linkedin:</label>
           <span>linkedin.com</span>
         </a>
-        <a class="sitem" target="_blank" href="https://github.com/mucoban">
+        <a
+          class="sitem"
+          target="_blank"
+          href="https://github.com/mucoban"
+          (mouseenter)="mouseEnterLink()"
+          (mouseleave)="mouseLeaveLink()"
+        >
           <img class="github" src="./assets/images/github.svg" alt="github" />
           <label>Github:</label>
           <span>github.com/mucoban</span>

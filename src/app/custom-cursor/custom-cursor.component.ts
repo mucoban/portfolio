@@ -5,6 +5,8 @@ import {
   ViewChild,
   ViewEncapsulation,
 } from '@angular/core';
+import { MouseService } from '../shared/services/mouse.service';
+import { Subject, takeUntil } from 'rxjs';
 
 @Component({
   selector: 'app-custom-cursor',
@@ -19,11 +21,17 @@ export class CustomCursorComponent {
   private addY = -51;
   private mouse = { x: -100, y: -100 };
   mouseMoving = false;
+  hoverLink = false;
 
   @ViewChild('cursorOutline') cursorOutline!: ElementRef<HTMLDivElement>;
   @ViewChild('cursorBall') cursorBall!: ElementRef<HTMLDivElement>;
 
-  constructor(private cdr: ChangeDetectorRef) {
+  private destroy$ = new Subject<boolean>();
+
+  constructor(
+    private cdr: ChangeDetectorRef,
+    private mouseService: MouseService,
+  ) {
     document.addEventListener('mousemove', (e) => {
       this.mouse.x = e.pageX;
       this.mouse.y = e.pageY;
@@ -35,10 +43,29 @@ export class CustomCursorComponent {
       this.mouseMoving = !this.mouseMoving;
       this.cdr.detectChanges(); // Force the HTML to update
     });
+
+    this.mouseService.mouse$
+      .pipe(takeUntil(this.destroy$))
+      .subscribe((value) => {
+        console.log('mouseService.mouse$', value);
+
+        if (value === 'mouseEnterLink') {
+          this.hoverLink = true;
+          this.cdr.detectChanges();
+        } else if (value === 'mouseLeaveLink') {
+          this.hoverLink = false;
+          this.cdr.detectChanges();
+        }
+      });
   }
 
   ngOnInit() {
     this.requestId = requestAnimationFrame((timestamp) => this.step(timestamp));
+  }
+
+  ngOnDestroy() {
+    this.destroy$.next(true);
+    this.destroy$.unsubscribe();
   }
 
   private step(timestamp: any) {
@@ -46,13 +73,13 @@ export class CustomCursorComponent {
     this.cursorBall.nativeElement.style.left = `${this.mouse.x}px`;
 
     if (this.mouseMoving) {
-      this.cursorOutline.nativeElement.style.transform = `translate(20px, 10px)`;
+      this.cursorOutline.nativeElement.style.transform = `translate(40px, 30px)`;
     } else {
       if (this.addY > -25) {
         this.addY -= 1.2; // bouncing speed
         const a = 2.5 - ((this.addY + 25) / 100 + 1);
         // console.log('aa', { a });
-        this.cursorOutline.nativeElement.style.transform = `translate(20px, 10px) scale(${a})`;
+        this.cursorOutline.nativeElement.style.transform = `translate(40px, 30px) scale(${a})`;
       } else {
         this.addY = 75;
       }
