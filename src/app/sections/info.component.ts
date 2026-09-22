@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MouseService } from '../shared/services/mouse.service';
 
 @Component({
   selector: 'app-info',
@@ -122,17 +123,19 @@ export class InfoComponent {
     },
     {
       image: './assets/images/github.svg',
-      href: 'https://www.linkedin.com/in/front-end-developer-mucahit-coban/',
+      href: 'https://github.com/mucoban',
       label: 'Github:',
-      text: 'https://github.com/mucoban',
+      text: 'github.com/mucoban',
     },
   ];
 
+  constructor(private mouseService: MouseService) {}
+
   mouseEnterLink() {
-    // this.mouseService.mouseEnterLink();
+    this.mouseService.mouseEnterLink();
   }
 
   mouseLeaveLink() {
-    // this.mouseService.mouseLeaveLink();
+    this.mouseService.mouseLeaveLink();
   }
 }
