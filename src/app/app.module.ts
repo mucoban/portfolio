@@ -10,6 +10,7 @@ import { StExperienceComponent } from './section-texts/svg-components/st-experie
 import { StSideWorksComponent } from './section-texts/svg-components/st-side-works.component';
 import { HeaderComponent } from './header/header.component';
 import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
+import { InfoComponent } from './sections/info.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
     HeaderComponent,
     CustomCursorComponent,
   ],
-  imports: [BrowserModule, NgScrollbarModule],
+  imports: [BrowserModule, NgScrollbarModule, InfoComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
