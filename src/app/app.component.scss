@@ -7,18 +7,20 @@ $headline-color: #555;
 
     circle {
       fill: $color;
-      transition: all .3s
+      transition: all 0.3s;
     }
 
     rect {
-      fill: $color
+      fill: $color;
     }
   }
 }
 
 .container {
-  width: 1170px; max-width: 100%;
-  margin: auto; padding: 0 15px;
+  width: 1170px;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 15px;
 
   &-full {
     margin: 0 15px;
@@ -38,7 +40,7 @@ $headline-color: #555;
 .column-menu {
   flex-grow: 0;
   padding: 50px 20px;
-  flex-shrink: 0
+  flex-shrink: 0;
 }
 
 .column-page {
@@ -63,7 +65,7 @@ $headline-color: #555;
 
     img {
       width: 200px;
-      max-width: 100%
+      max-width: 100%;
     }
   }
 }
@@ -82,7 +84,6 @@ $headline-color: #555;
 
 .section {
   padding: 60px 0px 60px 0px;
-  min-height: calc(100vh - 0px);
   display: flex;
   flex-wrap: wrap;
   align-content: flex-start;
@@ -143,7 +144,7 @@ $headline-color: #555;
     span {
       font-weight: 300;
       color: #555;
-      word-break: break-word
+      word-break: break-word;
     }
 
     .description {
@@ -152,7 +153,7 @@ $headline-color: #555;
 
       ::ng-deep {
         a {
-          color: #2158c4
+          color: #2158c4;
         }
       }
     }
@@ -170,7 +171,9 @@ $headline-color: #555;
   }
 
   .headline {
-    font-weight: 400; font-size: 30px; margin: 40px 0;
+    font-weight: 400;
+    font-size: 30px;
+    margin: 0 0 40px;
 
     svg {
       margin-bottom: -3px;
@@ -196,11 +199,11 @@ $headline-color: #555;
 
       img {
         height: 30px;
-        vertical-align: middle
+        vertical-align: middle;
       }
 
       label {
-        color: #333
+        color: #333;
       }
 
       .content {
@@ -220,7 +223,7 @@ $headline-color: #555;
       @for $i from 1 through 20 {
         &.p#{$i * 5} {
           .bar {
-            width: #{$i * 5 + '%'}
+            width: #{$i * 5 + "%"};
           }
         }
       }
@@ -229,7 +232,7 @@ $headline-color: #555;
         display: inline-block;
 
         &.break {
-          width: 100%
+          width: 100%;
         }
       }
     }
@@ -237,7 +240,7 @@ $headline-color: #555;
 
   &.used {
     .headline {
-      color: $headline-color
+      color: $headline-color;
     }
 
     .sitem {
@@ -246,13 +249,13 @@ $headline-color: #555;
       text-align: center;
 
       span {
-        color: #444
+        color: #444;
       }
 
       img {
         height: 40px;
         vertical-align: middle;
-        margin: 0 0 10px 0
+        margin: 0 0 10px 0;
       }
     }
   }
@@ -271,27 +274,32 @@ $headline-color: #555;
     }
 
     .title1 {
-      color: #777
+      color: #777;
     }
 
     .title2 {
       color: $color;
-      font-weight: 600
+      font-weight: 600;
     }
 
     .title3 {
-      color: $color
+      color: $color;
     }
   }
 
   &.side-works {
     //background: linear-gradient(270deg, #FF9D42 0%, #FF6069 50.91%, #B16CEA 100%);
     background-color: #589ad9;
-    .headline { color: white }
+    .headline {
+      color: white;
+    }
     .sitem {
       border: 1px solid white;
       border-radius: 5px;
-      a { color: #eee; font-weight: 700 }
+      a {
+        color: #eee;
+        font-weight: 700;
+      }
     }
   }
 }
@@ -328,7 +336,7 @@ $headline-color: #555;
       padding-left: 15px;
       margin-bottom: 11px;
       cursor: pointer;
-      transition: all .2s;
+      transition: all 0.2s;
       color: #333;
     }
   }
@@ -342,7 +350,7 @@ $headline-color: #555;
 
   .mitem {
     cursor: pointer;
-    transition: all .6s;
+    transition: all 0.6s;
 
     span {
       position: absolute;
@@ -369,10 +377,9 @@ $headline-color: #555;
 
   @for $i from 1 through 4 {
     &[active="#{$i}"] {
-
       .zip-svg circle {
         &:nth-child(#{$i}) {
-          r: 2.5
+          r: 2.5;
         }
       }
 
@@ -389,7 +396,7 @@ $headline-color: #555;
           &::after {
             display: inline-block;
             margin-bottom: 1px;
-            content: '';
+            content: "";
             height: 10px;
             width: 10px;
             border-radius: 20px;
@@ -405,7 +412,6 @@ $headline-color: #555;
           margin-bottom: 7px;
         }
       }
-
     }
   }
 }
@@ -440,22 +446,22 @@ $headline-color: #555;
 
   &.side-button {
     margin: 30px 0;
-    transition: all .2s;
-    opacity: .7;
+    transition: all 0.2s;
+    opacity: 0.7;
     transform: rotate(45deg);
     transform-origin: 53% 50%;
 
     img {
-      width: 40px
+      width: 40px;
     }
 
     &.down {
-      transform: rotate(225deg)
+      transform: rotate(225deg);
     }
 
     &.disabled {
-      opacity: .1;
-      pointer-events: none
+      opacity: 0.1;
+      pointer-events: none;
     }
   }
 }
@@ -477,13 +483,14 @@ $headline-color: #555;
     &.mobile {
       display: flex;
 
-      img { width: 20px}
-
+      img {
+        width: 20px;
+      }
     }
   }
 
   .column-page {
-    padding: 0 0px 0 20px
+    padding: 0 0px 0 20px;
   }
   .picture-box {
     display: none;
@@ -491,7 +498,7 @@ $headline-color: #555;
     }
   }
   .row {
-    padding: 30px 0
+    padding: 30px 0;
   }
   .section {
     min-height: calc(100vh - 60px);
@@ -499,7 +506,7 @@ $headline-color: #555;
 
     &.skills {
       .sitem-wrapper.break {
-        display: none
+        display: none;
       }
     }
   }
@@ -513,9 +520,12 @@ $headline-color: #555;
 
   .menu-box {
     .section-headlines {
-      padding-left: 0px; top: 5px;
+      padding-left: 0px;
+      top: 5px;
       .section-headline {
-        margin-bottom: 13px; font-size: 14px; white-space: nowrap;
+        margin-bottom: 13px;
+        font-size: 14px;
+        white-space: nowrap;
         font-weight: 500;
       }
     }
@@ -523,7 +533,6 @@ $headline-color: #555;
 }
 
 @media only screen and (max-width: 400px) {
-
   .section {
     &.info {
       .sitem {
@@ -534,7 +543,6 @@ $headline-color: #555;
       }
     }
   }
-
 }
 
 ::-webkit-scrollbar {

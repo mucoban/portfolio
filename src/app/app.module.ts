@@ -11,6 +11,7 @@ import { StSideWorksComponent } from './section-texts/svg-components/st-side-wor
 import { HeaderComponent } from './header/header.component';
 import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
 import { InfoComponent } from './sections/info.component';
+import { SkillsComponent } from './sections/skills.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { InfoComponent } from './sections/info.component';
     HeaderComponent,
     CustomCursorComponent,
   ],
-  imports: [BrowserModule, NgScrollbarModule, InfoComponent],
+  imports: [BrowserModule, NgScrollbarModule, InfoComponent, SkillsComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

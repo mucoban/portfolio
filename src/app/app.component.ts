@@ -7,7 +7,7 @@ import {
   ViewEncapsulation,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { experience, sideWorks, skills } from '../data';
+import { experience, sideWorks } from '../data';
 import { MouseService } from './shared/services/mouse.service';
 
 @Component({
@@ -24,7 +24,6 @@ export class AppComponent {
   @ViewChild('columnPage') columnPage: ElementRef;
   @ViewChildren('section') sections: QueryList<any>;
 
-  skills = skills;
   experience = experience;
   sideWorks = sideWorks;
 
