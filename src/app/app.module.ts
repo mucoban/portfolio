@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { CustomCursorComponent } from './custom-cursor/custom-cursor.component';
 import { InfoComponent } from './sections/info.component';
 import { SkillsComponent } from './sections/skills.component';
+import { ExperienceComponent } from './sections/experience.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,13 @@ import { SkillsComponent } from './sections/skills.component';
     HeaderComponent,
     CustomCursorComponent,
   ],
-  imports: [BrowserModule, NgScrollbarModule, InfoComponent, SkillsComponent],
+  imports: [
+    BrowserModule,
+    NgScrollbarModule,
+    InfoComponent,
+    SkillsComponent,
+    ExperienceComponent,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

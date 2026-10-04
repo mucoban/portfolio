@@ -7,7 +7,7 @@ import {
   ViewEncapsulation,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import { experience, sideWorks } from '../data';
+import { sideWorks } from '../data';
 import { MouseService } from './shared/services/mouse.service';
 
 @Component({
@@ -24,7 +24,6 @@ export class AppComponent {
   @ViewChild('columnPage') columnPage: ElementRef;
   @ViewChildren('section') sections: QueryList<any>;
 
-  experience = experience;
   sideWorks = sideWorks;
 
   constructor(private mouseService: MouseService) {}
