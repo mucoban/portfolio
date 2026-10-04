@@ -57,7 +57,7 @@ import { SvgSkillComponent } from '../svgs/svg-skill.component';
       padding: 15px;
       font-size: 15px;
       font-weight: 400;
-      transition: all 0.1s;
+      transition: all 0.3s;
       border-radius: 3px;
       background: #fff;
 
@@ -73,6 +73,7 @@ import { SvgSkillComponent } from '../svgs/svg-skill.component';
       &.active {
         background: #607d8b;
         color: white;
+        transform: rotate(-10deg);
       }
     }
 
@@ -175,7 +176,6 @@ typescript and modern frameworks overtime.`,
 css experience. I have done precise and responsive ui implementations according to photoshop, adobe xd
 design files using rem, em, px, @for, @mixins and nesting of scss besides many other css parameters.`,
     },
-    // { break: true },
     {
       title: 'Php, Codeigniter, Wordpress',
       titleB: '4 years',
@@ -192,7 +192,6 @@ developer while I was building small corporate websites. Since then it has been 
 following jobs too. I have experienced MysQli and PDO in php, mysql2 library of npm besides CRUD operations in
 multiple tables in one query, joins, wildcards and full-text search and sanitizing parameters.`,
     },
-    // { break: true },
     {
       title: 'Docker',
       titleB: '2 years',
